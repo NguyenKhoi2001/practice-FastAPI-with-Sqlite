@@ -4,9 +4,9 @@ sys.path.insert(0, "C:\\Users\\Dell\\Desktop\\python\\FastAPI")
 
 import uvicorn
 from fastapi import FastAPI
-from blog import models
-from blog.database import engine
-from blog.routers import blog, user, authentication 
+from src.utils import models
+from src.utils.database import engine
+from src.routers import blog, user, authentication 
 
 app = FastAPI()
 

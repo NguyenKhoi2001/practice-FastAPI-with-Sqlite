@@ -1,9 +1,6 @@
 from fastapi import APIRouter
-from sqlalchemy.orm import Session
-from .. import schemas, models
-from ..repository import user
-from pydantic import parse_obj_as
-from typing import List
+from src.utils import schemas
+from src.repository import user
 
 router = APIRouter(
     prefix='/user',

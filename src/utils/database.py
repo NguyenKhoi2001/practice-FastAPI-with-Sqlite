@@ -1,11 +1,10 @@
-from logging import raiseExceptions
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.sql import text
 from fastapi import HTTPException, status
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./database/blogAndUsers.db"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./src/database//blogAndUsers.db"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL, 
     connect_args={"check_same_thread": False})

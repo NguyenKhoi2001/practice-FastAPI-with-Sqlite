@@ -1,9 +1,10 @@
-from .. import schemas
 from fastapi import HTTPException, status
-from .. import hashing
-from ..database import selectQuery, insertQuery, deleteQuery
 from pydantic import parse_obj_as
 from typing import List
+from src.utils import schemas
+from src.utils.database import selectQuery, insertQuery, deleteQuery
+from src.security import hashing
+
 
 def create(request: schemas.User):
     query = '''
